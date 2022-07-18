@@ -35,6 +35,8 @@ Using Pandas and the Scikit-Learn’s `StandardScaler()`, the data were pre-proc
 ### Compile, Train, and Evaluate the Model
 For the initial model a total of 5,981 parameters (2 hidden layer and 1 output layer). The first hidden layer had 43 inputs, 80 neurons and 80 bias terms. The second hidden layer had 80 inputs, 30 neurons and 30 bias terms.The output layer had 30 inputs, 1 neuron, and 1 bias term. Both the first and second hidden layers were activated using `RELU - Rectified Linear Unit` function. The output layer was activated using the `Sigmoid` function. For the model target performance, the goal is 80% acccuracy, however the model only generated 72.44%.
 
+![Initial Model](https://github.com/kntln/Neural_Network_Charity_Analysis/blob/main/Figures/initial_model.png)
+
 ### Optimize the Model
 
 Three additional attempts were made to optimize the model's performance.
@@ -45,6 +47,7 @@ Three additional attempts were made to optimize the model's performance.
     * The accuracy slightly increased from 72.44% to 72.50%
     * Loss was also reduced from 57.65% to 57.39%
 
+![Attempt 1](https://github.com/kntln/Neural_Network_Charity_Analysis/blob/main/Figures/optimization1.png)
 
 * **Attempt #2:**
     * **INCOME_AMT** column was binned
@@ -53,15 +56,18 @@ Three additional attempts were made to optimize the model's performance.
     * The epoch was also changed to 125.
     * The change generated 72.35% accuracy and 60.75% loss. The model decreased in accuracy from the initial model.
 
+![Attempt 2](https://github.com/kntln/Neural_Network_Charity_Analysis/blob/main/Figures/optimization2.png)
 
  * **Attempt #3:**
     * **INCOME_AMT** column was binned
     * Added a third hidden layer for 25 neurons which resulted in 10,551 total parameters. 
     * The change generated 72.37% accuracy and 58.82% loss.
 
+![Attempt 3](https://github.com/kntln/Neural_Network_Charity_Analysis/blob/main/Figures/optimization3.png)
+
 
 ## Summary
-In Summary, optimizing the model does not always yield better results. Out of all the 3 attempts, only 1 slightly increased accuracy and reduced loss. As for other machine learning models, `Random Forest Classifier` would be recommended. `Random Forest Classifier` are structurally similar to neural network. In addition, the model is also robust and scalable therefore it is ideal for handling this type of data. Lastly, `Random Forest Classifier`'s output and feature selection are easy to interpret and can easily handle outliers and nonlinear data.
+In summary, optimizing the model does not always yield better results. Out of all the 3 attempts, only 1 slightly increased accuracy and reduced loss. As for other machine learning models, `Random Forest Classifier` would be recommended. `Random Forest Classifier` are structurally similar to neural network. In addition, the model is also robust and scalable therefore it is ideal for handling this type of data. Lastly, `Random Forest Classifier`'s output and feature selection are easy to interpret and can easily handle outliers and nonlinear data.
 
 
 
